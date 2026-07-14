@@ -1,17 +1,33 @@
 import { useState } from "react";
+import { reviewCode } from "../../services/reviewService";
 
-function ReviewForm() {
+function ReviewForm({ setReview }) {
   const [code, setCode] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (event) => {
     setCode(event.target.value);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = async (event) => {
+  event.preventDefault();
 
-    console.log(code);
-  };
+  try {
+    setLoading(true);
+
+    const response = await reviewCode("Python", code);
+
+    setReview(response);
+
+    setCode("");
+  } catch (error) {
+    console.error(error);
+
+    alert("Failed to review code.");
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <section className="review-form-card">
@@ -33,11 +49,12 @@ function ReviewForm() {
           <span>{code.length} Characters</span>
 
           <button
-            type="submit"
-            disabled={!code.trim()}
-          >
-            Analyze Code
-          </button>
+  type="submit"
+  className="btn"
+  disabled={!code.trim() || loading}
+>
+  {loading ? "Analyzing..." : "Analyze Code"}
+</button>
         </div>
       </form>
     </section>
