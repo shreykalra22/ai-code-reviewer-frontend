@@ -14,17 +14,11 @@ function HomePage() {
       <Navbar />
 
       <main className="container">
-
         <Hero />
 
-        <ReviewForm
-          setReview={setReview}
-        />
+        <ReviewForm setReview={setReview} />
 
-        <ReviewResult
-          review={review}
-        />
-
+        <ReviewResult review={review} />
       </main>
 
       <Footer />

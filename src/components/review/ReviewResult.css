@@ -1,19 +1,63 @@
-.review-result{
-
-    padding:2rem 0 4rem;
-}
-
-.result-card{
+.review-result-card{
+    margin-top:2rem;
 
     padding:2rem;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
 }
 
-.result-card h2{
+.score-card{
+
+    margin:1.5rem 0;
+
+    padding:1.5rem;
+
+    border-radius:12px;
+
+    background:#111827;
+
+    text-align:center;
+}
+
+.score-label{
+
+    display:block;
+
+    color:var(--text-secondary);
+
+    margin-bottom:.5rem;
+}
+
+.score-value{
+
+    color:var(--primary);
+
+    font-size:3rem;
+
+    font-weight:700;
+}
+
+.review-section{
+
+    margin-top:2rem;
+}
+
+.review-section h3{
 
     margin-bottom:1rem;
 }
 
-.result-card p{
+.review-text{
+
+    white-space:pre-wrap;
+
+    line-height:1.8;
 
     color:var(--text-secondary);
 }
