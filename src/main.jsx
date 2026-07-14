@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 
 import App from "./App";
@@ -12,14 +13,13 @@ import "./styles/animations.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <>
+    <BrowserRouter>
       <Toaster
         position="top-right"
         reverseOrder={false}
         gutter={12}
         toastOptions={{
           duration: 3500,
-
           style: {
             background: "#1f2937",
             color: "#fff",
@@ -28,14 +28,12 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             padding: "14px 18px",
             fontSize: "14px",
           },
-
           success: {
             iconTheme: {
               primary: "#22c55e",
               secondary: "#fff",
             },
           },
-
           error: {
             iconTheme: {
               primary: "#ef4444",
@@ -46,6 +44,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       />
 
       <App />
-    </>
+    </BrowserRouter>
   </React.StrictMode>
 );
