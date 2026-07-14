@@ -1,23 +1,17 @@
-import "./ReviewResult.css";
-
-function ReviewResult() {
+function ReviewResult({ review }) {
   return (
-    <section className="review-result">
+    <section className="review-result-card card">
+      <h2>AI Review Result</h2>
 
-      <div className="container">
+      {!review ? (
+        <p>No review generated yet.</p>
+      ) : (
+        <>
+          <h3>Score: {review.score}/10</h3>
 
-        <div className="result-card card">
-
-          <h2>AI Review Result</h2>
-
-          <p>
-            No review generated yet.
-          </p>
-
-        </div>
-
-      </div>
-
+          <p>{review.review}</p>
+        </>
+      )}
     </section>
   );
 }
