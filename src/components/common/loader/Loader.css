@@ -1,0 +1,32 @@
+.loader-container{
+    text-align:center;
+    padding:2rem;
+}
+
+.loader{
+
+    width:55px;
+    height:55px;
+
+    margin:auto;
+
+    border:6px solid rgba(255,255,255,.15);
+
+    border-top:6px solid var(--primary);
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+}
+
+.loader-container h3{
+
+    margin-top:1.5rem;
+}
+
+.loader-container p{
+
+    color:var(--text-secondary);
+
+    margin-top:.5rem;
+}
