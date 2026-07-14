@@ -1,0 +1,37 @@
+.navbar{
+    background:var(--surface);
+    border-bottom:1px solid var(--border);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.navbar-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:1rem 0;
+}
+
+.logo{
+    font-size:1.6rem;
+    font-weight:700;
+}
+
+.logo span{
+    color:var(--primary);
+}
+
+.nav-links{
+    display:flex;
+    gap:2rem;
+}
+
+.nav-links a{
+    color:var(--text-secondary);
+    transition:var(--transition);
+}
+
+.nav-links a:hover{
+    color:white;
+}

@@ -1,0 +1,19 @@
+.review-result{
+
+    padding:2rem 0 4rem;
+}
+
+.result-card{
+
+    padding:2rem;
+}
+
+.result-card h2{
+
+    margin-bottom:1rem;
+}
+
+.result-card p{
+
+    color:var(--text-secondary);
+}

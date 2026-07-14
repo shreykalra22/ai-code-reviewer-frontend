@@ -1,16 +1,45 @@
+import { useState } from "react";
+
 function ReviewForm() {
+  const [code, setCode] = useState("");
+
+  const handleChange = (event) => {
+    setCode(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    console.log(code);
+  };
+
   return (
-    <section>
-      <h2>Submit Code</h2>
+    <section className="review-form-card">
+      <h2>Submit Your Code</h2>
 
-      <textarea
-        rows="15"
-        placeholder="Paste your source code here..."
-      ></textarea>
+      <p>
+        Paste your source code below and let AI analyze your coding style,
+        quality and best practices.
+      </p>
 
-      <br />
+      <form onSubmit={handleSubmit}>
+        <textarea
+          value={code}
+          onChange={handleChange}
+          placeholder="Paste your source code here..."
+        />
 
-      <button>Review Code</button>
+        <div className="form-footer">
+          <span>{code.length} Characters</span>
+
+          <button
+            type="submit"
+            disabled={!code.trim()}
+          >
+            Analyze Code
+          </button>
+        </div>
+      </form>
     </section>
   );
 }

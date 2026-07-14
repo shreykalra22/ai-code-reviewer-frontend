@@ -1,0 +1,119 @@
+/* Generic Card */
+
+.card,
+.review-form-card,
+.review-result-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+/* =========================
+   Review Form
+========================= */
+
+.review-form-card {
+    max-width: 1000px;
+    margin: 0 auto 2rem;
+    padding: 2rem;
+}
+
+.review-form-card h2 {
+    margin-bottom: .75rem;
+    font-size: 2rem;
+}
+
+.review-form-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* =========================
+   Textarea
+========================= */
+
+.review-form-card textarea {
+    width: 100%;
+    min-height: 320px;
+
+    padding: 1rem;
+
+    border-radius: 12px;
+
+    border: 1px solid var(--border);
+
+    background: #0f172a;
+
+    color: white;
+
+    resize: vertical;
+
+    font-size: 1rem;
+
+    font-family: monospace;
+
+    outline: none;
+
+    transition: .3s;
+}
+
+.review-form-card textarea:focus {
+    border-color: var(--primary);
+}
+
+/* =========================
+   Footer
+========================= */
+
+.form-footer {
+
+    margin-top: 1rem;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.form-footer span {
+
+    color: var(--text-secondary);
+}
+
+/* =========================
+   Button
+========================= */
+
+.review-form-card button {
+
+    border: none;
+
+    padding: .9rem 1.6rem;
+
+    border-radius: 10px;
+
+    background: var(--primary);
+
+    color: white;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.review-form-card button:hover {
+
+    background: var(--primary-hover);
+}
+
+.review-form-card button:disabled {
+
+    opacity: .5;
+
+    cursor: not-allowed;
+}

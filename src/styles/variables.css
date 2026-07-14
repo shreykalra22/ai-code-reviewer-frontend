@@ -1,0 +1,24 @@
+:root{
+
+--primary:#2563eb;
+--primary-hover:#1d4ed8;
+
+--background:#0f172a;
+--surface:#1e293b;
+--surface-light:#334155;
+
+--border:#475569;
+
+--text:#f8fafc;
+--text-secondary:#cbd5e1;
+
+--success:#22c55e;
+--warning:#eab308;
+--danger:#ef4444;
+
+--radius:14px;
+
+--shadow:0 12px 35px rgba(0,0,0,.25);
+
+--transition:.3s ease;
+}
