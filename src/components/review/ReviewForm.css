@@ -1,0 +1,71 @@
+.review-form{
+
+    padding:2rem 0;
+}
+
+.form-card{
+
+    padding:2rem;
+}
+
+.form-card h2{
+
+    font-size:2rem;
+
+    margin-bottom:.5rem;
+}
+
+.form-card p{
+
+    color:var(--text-secondary);
+
+    margin-bottom:2rem;
+
+    line-height:1.7;
+}
+
+textarea{
+
+    width:100%;
+
+    min-height:380px;
+
+    resize:vertical;
+
+    background:#0b1120;
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    color:white;
+
+    padding:1rem;
+
+    font-size:15px;
+
+    margin-bottom:1rem;
+}
+
+textarea:focus{
+
+    border-color:var(--primary);
+}
+
+.form-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+}
+
+.form-footer span{
+
+    color:var(--text-secondary);
+}
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

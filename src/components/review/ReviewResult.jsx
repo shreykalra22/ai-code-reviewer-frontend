@@ -1,9 +1,23 @@
+import "./ReviewResult.css";
+
 function ReviewResult() {
   return (
-    <section>
-      <h2>Review Result</h2>
+    <section className="review-result">
 
-      <p>No review generated yet.</p>
+      <div className="container">
+
+        <div className="result-card card">
+
+          <h2>AI Review Result</h2>
+
+          <p>
+            No review generated yet.
+          </p>
+
+        </div>
+
+      </div>
+
     </section>
   );
 }
